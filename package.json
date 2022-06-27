@@ -1,0 +1,9 @@
+{
+  "name": "landesmeisterschaften2022",
+  "author": "Felix Gehring",
+  "version": "0.0.1",
+  "license": "unlicensed",
+  "devDependencies": {
+    "httpserver": "0.3.0"
+  }
+}
