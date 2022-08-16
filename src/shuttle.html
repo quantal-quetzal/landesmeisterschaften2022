@@ -1,0 +1,51 @@
+---
+title: Shuttle 🚌
+date: 2022-01-01 # only for nav bar order
+tags: [section]
+layout: layouts/standard.liquid
+---
+
+<div class="p-4">
+  <p class="font-bold">
+    Du wünscht ein Gepäck-Shuttle zum Freibad oder zurück? Hier kannst du
+    einfach eines anfordern. Die Fahrer werden darüber informiert und rufen dich
+    gegebenenfalls an.
+  </p>
+  <div class="h-10"></div>
+  <form
+    class="form-grid gap-4"
+    name="shuttle"
+    method="POST"
+    data-netlify="true"
+  >
+    <label class="p-2" for="direction">Richtung</label>
+    <select
+      class="p-2 rounded-md shadow-md bg-white"
+      id="direction"
+      name="direction"
+    >
+      <option value="freibad">vom See zum Freibad</option>
+      <option value="see">vom Freibad zum See</option>
+    </select>
+    <label class="p-2" for="name">Dein Vorname</label>
+    <input
+      class="p-2 rounded-md shadow-md"
+      type="text"
+      name="name"
+      id="name"
+      autocapitalize="on"
+    />
+    <label class="p-2" for="phone">Deine Telefonnr.</label>
+    <input
+      class="p-2 rounded-md shadow-md"
+      type="tel"
+      name="phone"
+      id="phone"
+    />
+    <button
+      class="col-span-2 shadow-md bg-emerald-700 hover:bg-emerald-800 text-white font-semibold py-2 px-4 border border-emerald-700 hover:border-transparent rounded-md"
+    >
+      Absenden 🚀
+    </button>
+  </form>
+</div>

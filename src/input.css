@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.condensed {
+  font-family: monospace;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-stretch: condensed;
+}

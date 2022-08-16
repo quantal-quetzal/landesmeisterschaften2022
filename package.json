@@ -1,9 +1,20 @@
 {
   "name": "landesmeisterschaften2022",
-  "author": "Felix Gehring",
-  "version": "0.0.1",
-  "license": "unlicensed",
+  "version": "1.0.0",
+  "repository": "git@github.com:quantal-quetzal/landesmeisterschaften2022.git",
+  "license": "MIT",
+  "scripts": {
+    "dev": "yarn tailwindcss -i ./src/input.css -o ./dist/main.css --watch & yarn 11ty --serve",
+    "minify": "yarn html-minifier --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --use-short-doctype --minify-css true --minify-js true --input-dir dist --output-dir dist",
+    "tailwind": "yarn tailwindcss -i src/input.css -o dist/main.css",
+    "11ty": "yarn eleventy --input=src --output=dist",
+    "clean": "yarn rimraf dist",
+    "build": "yarn clean && yarn 11ty && yarn tailwind && cp -r public dist && yarn minify"
+  },
   "devDependencies": {
-    "httpserver": "0.3.0"
+    "@11ty/eleventy": "^1.0.1",
+    "html-minifier": "^4.0.0",
+    "rimraf": "^3.0.2",
+    "tailwindcss": "^3.1.8"
   }
 }
