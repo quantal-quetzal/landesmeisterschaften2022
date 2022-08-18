@@ -10,7 +10,7 @@
     "11ty": "yarn eleventy --input=src --output=dist",
     "ts": "yarn tsc",
     "clean": "yarn rimraf dist && yarn rimraf functions/dist",
-    "build": "yarn clean && yarn ts && yarn 11ty && yarn tailwind && cp -r public dist && yarn minify"
+    "build": "yarn clean && yarn ts && yarn 11ty && yarn tailwind && cp -r public dist"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1",
