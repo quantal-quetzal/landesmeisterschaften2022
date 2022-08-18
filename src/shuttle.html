@@ -6,15 +6,29 @@ layout: layouts/standard.liquid
 ---
 
 <div class="p-4">
-  <p class="font-bold">
+  <p>
     Du wünscht ein Gepäck-Shuttle zum Freibad oder zurück? Hier kannst du
     einfach eines anfordern. Die Fahrer werden darüber informiert und rufen dich
     gegebenenfalls an.
   </p>
-  <p class="pt-2">Dieses Formular wird am Wettkampftag aktiviert.</p>
+  <p class="font-bold">
+    Das Shuttle verkehrt nur in der Zeit von 8:30 Uhr bis 10:30 Uhr und jeweils
+    nach Wettkampfende an den beiden Tagen.
+  </p>
   <div class="h-10"></div>
-  <form class="form-grid gap-4" name="shuttle" method="POST">
-    <!-- data-netlify="true" -->
+  <form
+    class="form-grid gap-4"
+    name="shuttle"
+    method="POST"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+    action="/success"
+  >
+    <p class="hidden">
+      <label>
+        Don't fill this out if you're human: <input name="bot-field" />
+      </label>
+    </p>
     <label class="p-2" for="direction">Richtung</label>
     <select
       class="p-2 rounded-md shadow-md bg-white"
