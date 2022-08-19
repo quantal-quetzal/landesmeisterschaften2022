@@ -10,15 +10,14 @@
   <body class="m-0 p-0 flex flex-col bg-gray-200 min-h-full">
     <div class="bg-white shadow-md">
       <h1 class="text-2xl p-4 font-bold text-red-500">
-        Landesmeisterschaften 2022 🌊🏊
+        Landesmeister&shy;schaften 2022
       </h1>
-      <nav class="flex p-4 pt-0">
-        <ul class="flex gap-3">
+      <nav class="flex flex-wrap gap-2 p-2 pt-0">
         {% for section in collections.section %}
-          <li>
+          <div>
             <a href="{{ section.url }}"">
               <button
-                class="font-semibold py-2 px-4 border border-red-500 hover:border-transparent rounded
+                class="font-semibold py-2 px-2 border border-red-500 hover:border-transparent rounded
                 {% if page.url == section.url %} 
                   hover:bg-red-600
                   bg-red-500 
@@ -34,9 +33,8 @@
                 {{ section.data.title }}
               </button>
             </a>
-          </li>
+          </div>
         {% endfor %}
-        </ul>
       </nav>
     </div>
     <main class="flex-1 h-full">{{ content }}</main>

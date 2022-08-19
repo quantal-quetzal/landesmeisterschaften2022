@@ -24,11 +24,8 @@ layout: layouts/standard.liquid
     netlify-honeypot="bot-field"
     action="/success"
   >
-    <p class="hidden">
-      <label>
-        Don't fill this out if you're human: <input name="bot-field" />
-      </label>
-    </p>
+    <label class="hidden"> Don't fill this out if you're human: </label
+    ><input name="bot-field" class="hidden" />
     <label class="p-2" for="direction">Richtung</label>
     <select
       class="p-2 rounded-md shadow-md bg-white"
@@ -39,7 +36,7 @@ layout: layouts/standard.liquid
       <option value="freibad">vom See zum Freibad</option>
       <option value="see">vom Freibad zum See</option>
     </select>
-    <label class="p-2" for="name">Dein Vorname</label>
+    <label class="p-2" for="name">Dein Name</label>
     <input
       class="p-2 rounded-md shadow-md"
       type="text"
@@ -48,7 +45,7 @@ layout: layouts/standard.liquid
       autocapitalize="on"
       required="true"
     />
-    <label class="p-2" for="phone">Deine Telefonnr.</label>
+    <label class="p-2" for="phone">Deine Telnr.</label>
     <input
       class="p-2 rounded-md shadow-md"
       type="tel"
